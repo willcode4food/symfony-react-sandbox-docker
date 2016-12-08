@@ -1,0 +1,20 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+body {
+  padding-top: 50px;
+}
+
+.main-container {
+  padding: 40px 15px;
+
+  a .recipe-body {
+      text-decoration: none;
+      color: red;
+  }
+
+}
+#search-box {
+    width: 300px;
+    margin-top: 20px;
+}

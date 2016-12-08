@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{asset('favicon.ico')}}">
+
+    <title>Symfony React</title>
+    {% block stylesheets %}
+        <link href="{{asset('assets/build/stylesheets/main.css', 'webpack')}}" rel="stylesheet">
+    {% endblock %}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Symfony React Example</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="https://github.com/Limenius/symfony-react-sandbox">See the project on GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+
+            <div id="react-container">{% spaceless %}{% block body %}{% endblock %}{% endspaceless%}</div>
+        </div>
+
+    </div><!-- /.container -->
+
+
+    {% block javascripts %}
+        <script>
+        {# set a base url to '/' or maybe '/app_dev.php' #}
+        window.baseUrl = '{{ path('homepage') }}';
+        </script>
+        {% if app.environment == "dev" %}
+            <script src="{{ asset('webpack-dev-server.js', 'webpack') }}"></script>
+        {% endif %}
+        <!--<script src="{{ asset('assets/build/client-bundle.js', 'webpack') }}"></script>-->
+    {% endblock %}
+  </body>
+</html>
