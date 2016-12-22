@@ -18,4 +18,4 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
 
 RUN docker-php-ext-install pdo pdo_mysql opcache intl && a2enmod rewrite && mkdir /var/www/html/web
 
-RUN npm install -g webpack webpack-dev-server
+RUN npm install -g webpack webpack-dev-server ntl
