@@ -19,14 +19,16 @@ Note that you won't need to run an external node server to do server-side render
 How to run it
 =============
 
-Requirements: you need a recent version of node, like `v5.5.0`, and Webpack installed (you can install it with `npm install -g webpack webpack-dev-server`.
 
-    git clone https://github.com/Limenius/symfony-react-sandbox.git
-    cd symfony-react-sandbox
-    composer install
-    npm install
+Requirements: Get Docker https://www.docker.com/
 
-And then, run a live server with Webpack hot-reloading of assets:
+    git clone https://github.com/willcode4food/symfony-react-sandbox-docker.git
+    cd symfony-react-sandbox-docker
+    docker-compose up
+
+
+
+And then, run a live server with Webpack hot-reloading of assets.  
 
 * Building the server-side react Webpack bundle.
     
